@@ -1,4 +1,7 @@
+import React from "react";
 import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+
 import CountDownTimer from "./CountDownTimer";
 import calculateDaysUntilBirthday from "./calculateDays";
 
@@ -24,12 +27,19 @@ function App() {
 
   return (
     <div className="App">
-      <h2>
-        Mady, it is
-        <h1>{calculateDaysUntilBirthday()}</h1>
-        {calculateDaysUntilBirthday() > 1 ? "days" : "day"} until your birthday!
-      </h2>
-      {/* <CountDownTimer hoursMinSecs={hoursMinSecs} /> */}
+      <Container>
+        <Row>
+          <Col>
+            <h2>
+              Mady, it is
+              <h1>{calculateDaysUntilBirthday()}</h1>
+              {calculateDaysUntilBirthday() > 1 ? "days" : "day"} until your
+              birthday!
+            </h2>
+            {/* <CountDownTimer hoursMinSecs={hoursMinSecs} /> */}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
